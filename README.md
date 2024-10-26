@@ -38,3 +38,26 @@ Looking to connect a database? Add a Variable Reference and select the DATABASE_
 ## Add a Domain on Railway
 
 Go into the lighthouse-server Settings tab and click "Generate domain" and port `8080` and Generate Domain
+
+## Use server in the lighthouserc.json
+
+```javascript
+// lighthouserc.json
+{
+  "ci": {
+    "collect": {
+      "url": ["http://localhost:9000"],
+      "numberOfRuns": 5,
+      "startServerCommand": "npm run serve"
+    },
+    "assert": {
+      "preset": "lighthouse:no-pwa"
+    },
+    "upload": {
+      "target": "lhci",
+      "serverBaseUrl": "[LHCI_SERVER_URL]"
+    },
+    "headful": false
+  }
+}
+```
