@@ -21,3 +21,20 @@ https://railway.app/project/xxxx-xxxx-xxxx-xxxx
 
 $ railway up --detach
 ```
+
+## Add a PostgreSQL Database
+
+```bash
+$ railway add
+> [x] PostgreSQL
+  [ ] MySQL
+  [ ] Redis
+  [ ] MongoDB
+  🎉 Added PostgreSQL to project
+```
+
+Looking to connect a database? Add a Variable Reference and select the DATABASE_URL option in the dropdown
+
+## Add a Domain on Railway
+
+Go into the lighthouse-server Settings tab and click "Generate domain" and port `8080` and Generate Domain
